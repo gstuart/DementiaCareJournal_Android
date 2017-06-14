@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Dementia Care Journal</string>
+
+    <!--Main Activity-->
+    <string name="aboutButton">About</string>
+    <string name="loginButton">Log In</string>
+</resources>
