@@ -3,7 +3,7 @@
 
     <!--Main Activity-->
     <string name="aboutButton">About</string>
-    <string name="loginButton">Log In</string>
+    <string name="loginButton">Sign in or register</string>
     <string name="title_activity_login">Sign in</string>
 
     <!-- Login Activity -->
