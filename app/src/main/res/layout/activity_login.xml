@@ -7,4 +7,40 @@
     tools:context="com.epicodus.dementiacarejournal.LoginActivity"
     android:background="@color/colorPrimaryLight">
 
+
+    <EditText
+        android:id="@+id/prompt_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:hint="@string/prompt_email"
+        android:layout_above="@+id/prompt_password"
+        android:layout_alignLeft="@+id/prompt_password"
+        android:layout_alignStart="@+id/prompt_password"
+        android:layout_marginBottom="44dp" />
+
+    <EditText
+        android:id="@+id/prompt_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:hint="@string/prompt_password"
+        android:layout_marginBottom="93dp"
+        android:layout_above="@+id/signInButton"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/signInButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="28dp"
+        android:text="@string/loginButton"
+        android:textSize="20sp"
+        android:background="@color/colorAccent"
+        android:textColor="@color/colorText"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 </RelativeLayout>
