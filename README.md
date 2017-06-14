@@ -1,4 +1,4 @@
-![Banner Image](/app/src/main/res/drawable/main.jpg)
+<img src="/app/src/main/res/drawable/main.jpg" alt="Banner Image" width="250">
 # Dementia Care Journal_Android
  [![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg)](https://github.com/RichardLitt/standard-readme)
 ![Dependencies](https://img.shields.io/badge/dependencies-up%20to%20date-brightgreen.svg)
