@@ -2,13 +2,15 @@
     <string name="app_name">Dementia Care Journal</string>
 
     <!--Main Activity-->
-    <string name="aboutButton">About</string>
-    <string name="loginButton">Sign in or register</string>
-    <string name="title_activity_login">Sign in</string>
+    <string name="profileButton">Profile</string>
+    <string name="journalButton">Journal</string>
 
     <!-- Login Activity -->
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
-    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in">Sign In</string>
+    <string name="aboutButton">About</string>
+    <string name="registerLink">"Don't have an account? Sign up here."</string>
+    <string name="signInButton">Sign in</string>
 
 </resources>

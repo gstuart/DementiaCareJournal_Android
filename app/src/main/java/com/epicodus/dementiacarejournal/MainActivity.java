@@ -11,8 +11,8 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 
 public class MainActivity extends AppCompatActivity  implements View.OnClickListener{
-    @Bind (R.id.aboutButton) Button mAboutButton;
-    @Bind (R.id.logInButton) Button mLogInButton;
+    @Bind(R.id.profileButton) Button mProfileButton;
+    @Bind(R.id.journalButton) Button mJournalButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,20 +20,14 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
 
-        Typeface text = Typeface.createFromAsset(getAssets(), "Roboto/Roboto-Regular.ttf");
-            mAboutButton.setTypeface(text);
-            mLogInButton.setTypeface(text);
-
-        mAboutButton.setOnClickListener(this);
-        mLogInButton.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
-        if (v == mAboutButton) {
+        if (v == mJournalButton) {
 
         }
-        if (v == mLogInButton) {
+        if (v == mProfileButton) {
             Intent intent = new Intent(MainActivity.this, LoginActivity.class);
             startActivity(intent);
         }
