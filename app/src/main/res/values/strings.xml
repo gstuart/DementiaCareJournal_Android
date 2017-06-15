@@ -21,4 +21,13 @@
     <string name="emailEditText">Email</string>
     <string name="passwordEditText">Password</string>
     <string name="confirmPasswordEditText">Confirm Password</string>
+
+    <!--Overflow Menu Items-->
+    <string name="logout">Logout</string>
+    <string name="profile">Profile</string>
+    <string name="activity">Activity</string>
+    <string name="mood">Mood</string>
+    <string name="behavior">Behavior</string>
+    <string name="diet">Diet</string>
+    <string name="medication">Medication</string>
 </resources>
