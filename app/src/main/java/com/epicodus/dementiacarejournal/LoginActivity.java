@@ -26,7 +26,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         ButterKnife.bind(this);
         mSignInButton.setOnClickListener(this);
         mAboutButton.setOnClickListener(this);
-        mRegisterTextView.setOnClickListener();
+        mRegisterTextView.setOnClickListener(this);
     }
 
     @Override
