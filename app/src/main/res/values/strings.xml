@@ -12,5 +12,13 @@
     <string name="aboutButton">About</string>
     <string name="registerLink">"Don't have an account? Sign up here."</string>
     <string name="signInButton">Sign in</string>
+    <string name="title_activity_create_account">CreateAccountActivity</string>
 
+    <!--Create Account Activity-->
+    <string name="createAccount">Create Account</string>
+    <string name="createUserButton">Sign Up</string>
+    <string name="nameEditText">Name</string>
+    <string name="emailEditText">Email</string>
+    <string name="passwordEditText">Password</string>
+    <string name="confirmPasswordEditText">Confirm Password</string>
 </resources>

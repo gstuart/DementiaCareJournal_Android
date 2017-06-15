@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "8033953959",
+    "firebase_url": "https://dementiacarejournal.firebaseio.com",
+    "project_id": "dementiacarejournal",
+    "storage_bucket": "dementiacarejournal.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:8033953959:android:01f44a8f71ff6015",
+        "android_client_info": {
+          "package_name": "com.epicodus.dementiacarejournal"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "8033953959-81l6v6oljc8pp0bk5kao7mo8d170tdat.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.epicodus.dementiacarejournal",
+            "certificate_hash": "ac826b20eb8b244f19909b0b2cd0942ede45e411"
+          }
+        },
+        {
+          "client_id": "8033953959-4m1fmaadfi6gkqgiu07ogqrgsql6mkc4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC23tW1TCcjyz2rZyJPRL8ow93DPvkrCSA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "8033953959-4m1fmaadfi6gkqgiu07ogqrgsql6mkc4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
