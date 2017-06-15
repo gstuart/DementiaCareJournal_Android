@@ -53,7 +53,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         };
     }
 
-
+//TODO need to hookup login to firebase
     @Override
     public void onStart() {
         super.onStart();

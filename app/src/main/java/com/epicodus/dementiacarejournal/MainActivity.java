@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
             startActivity(intent);
         }
     }
-
+//TODO Change loginActivity in above if statement to ProfileActivity
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
