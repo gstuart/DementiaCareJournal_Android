@@ -3,8 +3,14 @@ package com.epicodus.dementiacarejournal;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.TextView;
 
-public class CreateAccountActivity extends AppCompatActivity {
+import org.w3c.dom.Text;
+
+import butterknife.Bind;
+
+public class CreateAccountActivity extends AppCompatActivity implements View.OnClickListener {
+    @Bind(R.id.registerTextView) TextView mRegister;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
