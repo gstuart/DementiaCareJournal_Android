@@ -16,7 +16,7 @@
 
     <!--Create Account Activity-->
     <string name="createAccount">Create Account</string>
-    <string name="createUserButton">Sign Up</string>
+    <string name="createUserButton">Register and Log In</string>
     <string name="nameEditText">Name</string>
     <string name="emailEditText">Email</string>
     <string name="passwordEditText">Password</string>
