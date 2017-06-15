@@ -76,6 +76,21 @@
         android:textSize="30sp"
         android:textStyle="bold"
         android:layout_above="@+id/linearLayout"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:id="@+id/textView" />
+
+    <Button
+        android:id="@+id/aboutButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="@string/aboutButton"
+        android:textSize="20sp"
+        android:background="@color/colorAccent"
+        android:textColor="@color/colorText"
+        android:layout_marginBottom="22dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/textView"
+        android:layout_alignEnd="@+id/textView" />
 
 </RelativeLayout>
