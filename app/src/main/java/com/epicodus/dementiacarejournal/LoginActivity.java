@@ -2,12 +2,16 @@ package com.epicodus.dementiacarejournal;
 
 import android.content.Intent;
 import android.provider.ContactsContract;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 import org.w3c.dom.Text;
 
@@ -19,6 +23,9 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     @Bind(R.id.aboutButton) Button mAboutButton;
     @Bind(R.id.registerTextView) TextView mRegisterTextView;
 
+    private FirebaseAuth mAuth;
+    private FirebaseAuth.AuthStateListener mAuthListener;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,6 +34,38 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         mSignInButton.setOnClickListener(this);
         mAboutButton.setOnClickListener(this);
         mRegisterTextView.setOnClickListener(this);
+
+        mAuth = FirebaseAuth.getInstance();
+        mAuthListener = new FirebaseAuth.AuthStateListener() {
+            @Override
+            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
+                FirebaseUser user = firebaseAuth.getCurrentUser();
+                if (user != null) {
+                    getSupportActionBar().setTitle("Welcome, " + user.getDisplayName() + "!");
+                    Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                    startActivity(intent);
+                    finish();
+                } else {
+
+                }
+            }
+        };
+    }
+
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        mAuth.addAuthStateListener(mAuthListener);
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        if (mAuthListener != null) {
+            mAuth.removeAuthStateListener(mAuthListener);
+        }
     }
 
     @Override
