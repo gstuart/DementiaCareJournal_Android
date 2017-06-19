@@ -23,10 +23,5 @@
                 android:value="com.epicodus.dementiacarejournal.LoginActivity" />
         </activity>
 
-        <activity android:name=".AboutActivity" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.epicodus.dementiacarejournal.LoginActivity"  />
-        </activity>
  </application>
 </manifest>

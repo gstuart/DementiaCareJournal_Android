@@ -28,7 +28,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     public static final String TAG = LoginActivity.class.getSimpleName();
 
     @Bind(R.id.passwordLoginButton) Button mSignInButton;
-    @Bind(R.id.aboutButton) Button mAboutButton;
     @Bind(R.id.registerTextView) TextView mRegisterTextView;
     @Bind(R.id.emailEditText) EditText mEmailEditText;
     @Bind(R.id.passwordEditText) EditText mPasswordEditText;
@@ -44,7 +43,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         ButterKnife.bind(this);
 
         mSignInButton.setOnClickListener(this);
-        mAboutButton.setOnClickListener(this);
         mRegisterTextView.setOnClickListener(this);
 
         mAuth = FirebaseAuth.getInstance();
@@ -82,10 +80,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
     @Override
     public void onClick(View v) {
-        if (v == mAboutButton) {
-            Intent intent = new Intent(LoginActivity.this, AboutActivity.class);
-            startActivity(intent);
-        }
         if (v == mSignInButton) {
             loginWithPassword();
         }
