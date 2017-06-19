@@ -25,7 +25,9 @@ import butterknife.ButterKnife;
 
 public class CreateAccountActivity extends AppCompatActivity implements View.OnClickListener {
     @Bind(R.id.createUserButton) Button mCreateUserButton;
-    @Bind(R.id.nameEditText) EditText mNameEditText;
+    @Bind(R.id.firstNameEditText) EditText mFirstNameEditText;
+    @Bind(R.id.lastNameEditText) EditText mLastNameEditText;
+    @Bind(R.id.phoneEditText) EditText mphoneEditText;
     @Bind(R.id.emailEditText) EditText mEmailEditText;
     @Bind(R.id.passwordEditText) EditText mPasswordEditText;
     @Bind(R.id.confirmPasswordEditText) EditText mConfirmPasswordEditText;
@@ -67,13 +69,37 @@ public class CreateAccountActivity extends AppCompatActivity implements View.OnC
             public void onAuthStateChanged (@NonNull FirebaseAuth firebaseAuth){
                 final FirebaseUser user = firebaseAuth.getCurrentUser();
                 if (user != null) {
-                    Intent intent = new Intent(CreateAccountActivity.this, Create_Profile_Activity.class);
+                    Intent intent = new Intent(CreateAccountActivity.this, Profile.class);
                     intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                     startActivity(intent);
                     finish();
                 }
             }
         };
+    }
+
+    private boolean isValidFirstName(String firstName) {
+        if (firstName.equals("")) {
+            mFirstNameEditText.setError("Please enter your name.");
+            return false;
+        }
+        return true;
+    }
+
+    private boolean isValidLastName(String lastName) {
+        if (lastName.equals("")) {
+            mLastNameEditText.setError("Please enter your name.");
+            return false;
+        }
+        return true;
+    }
+
+    private boolean isValidPhone(String phone) {
+        if (phone.equals("")) {
+            mphoneEditText.setError("Please enter your phone number");
+            return false;
+        }
+        return true;
     }
 
     private boolean isValidEmail(String email) {
@@ -83,14 +109,6 @@ public class CreateAccountActivity extends AppCompatActivity implements View.OnC
             return false;
         }
         return isGoodEmail;
-    }
-
-    private boolean isValidFirstName(String firstName) {
-        if (firstName.equals("")) {
-            mNameEditText.setError("Please enter your name.");
-            return false;
-        }
-        return true;
     }
 
     private boolean isValidPassword(String password, String confirmPassword) {
@@ -119,15 +137,20 @@ public class CreateAccountActivity extends AppCompatActivity implements View.OnC
     }
 
     private void createNewUser() {
-        mDisplayName = mNameEditText.getText().toString().trim();
+        mDisplayName = mFirstNameEditText.getText().toString().trim();
+        String lastName = mLastNameEditText.getText().toString().trim();
+        String phone = mphoneEditText.getText().toString().trim();
         final String email = mEmailEditText.getText().toString().trim();
         String password = mPasswordEditText.getText().toString().trim();
         String confirmPassword = mConfirmPasswordEditText.getText().toString().trim();
 
         boolean validEmail = isValidEmail(email);
-        boolean validName = isValidFirstName(mDisplayName);
+        boolean validFirstName = isValidFirstName(mDisplayName);
+        boolean validLastName = isValidLastName(lastName);
+        boolean validPhone = isValidPhone(phone);
+
         boolean validPassword = isValidPassword(password, confirmPassword);
-        if (!validEmail || !validName || !validPassword) return;
+        if (!validEmail || !validFirstName || !validLastName|| !validPhone || !validPassword) return;
 
         mAuthProgressDialog.show();
 
