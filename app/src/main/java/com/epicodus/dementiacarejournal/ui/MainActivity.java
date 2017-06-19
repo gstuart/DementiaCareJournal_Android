@@ -22,11 +22,15 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthListener;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
+
+        mProfileButton.setOnClickListener(this);
+        mJournalButton.setOnClickListener(this);
 
     }
 
