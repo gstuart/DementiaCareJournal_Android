@@ -41,28 +41,15 @@
         android:textColorHint="@color/colorText"/>
 
     <EditText
-        android:id="@+id/userPassword"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPassword"
-        android:hint="@string/prompt_password"
-        android:layout_marginTop="20dp"
-        android:layout_below="@+id/emailEditText"
-        android:layout_alignLeft="@+id/emailEditText"
-        android:layout_alignStart="@+id/emailEditText"
-        android:textColorHint="@color/colorText"/>
-
-    <EditText
         android:id="@+id/userPhone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="phone"
         android:hint="@string/userPhoneHint"
-        android:layout_below="@+id/userPassword"
-        android:layout_alignLeft="@+id/userPassword"
-        android:layout_alignStart="@+id/userPassword"
+        android:layout_below="@+id/emailEditText"
+        android:layout_alignLeft="@+id/emailEditText"
+        android:layout_alignStart="@+id/emailEditText"
         android:layout_marginTop="20dp"
         android:textColorHint="@color/colorText"/>
 
