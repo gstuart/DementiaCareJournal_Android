@@ -1,4 +1,4 @@
-package com.epicodus.dementiacarejournal;
+package com.epicodus.dementiacarejournal.ui;
 
 import android.content.Intent;
 import android.graphics.Typeface;
@@ -11,6 +11,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
+import com.epicodus.dementiacarejournal.R;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
@@ -38,11 +39,11 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
 
         }
         if (v == mProfileButton) {
-            Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+            Intent intent = new Intent(MainActivity.this, ProfileActivity.class);
             startActivity(intent);
         }
     }
-//TODO Change loginActivity in above if statement to ProfileActivity
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
