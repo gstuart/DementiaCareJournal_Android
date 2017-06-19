@@ -40,7 +40,7 @@ public class Create_Profile_Activity extends AppCompatActivity {
 
     private void logout() {
         FirebaseAuth.getInstance().signOut();
-        Intent intent = new Intent(Create_Profile_Activity.this, LoginActivity.class);
+        Intent intent = new Intent(Create_Profile_Activity.this, MainActivity.class); //TODO change mainActivity to LogActivity
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent);
         finish();
