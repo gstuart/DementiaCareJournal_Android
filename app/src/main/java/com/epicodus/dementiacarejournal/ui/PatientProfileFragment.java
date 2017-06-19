@@ -17,7 +17,7 @@ public class PatientProfileFragment extends Fragment implements View.OnClickList
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_user_profile, container, false);
+        View view = inflater.inflate(R.layout.fragment_patient_profile, container, false);
         saveButton = (Button) view.findViewById(R.id.saveButton);
         saveButton.setOnClickListener(this);
         return view;
