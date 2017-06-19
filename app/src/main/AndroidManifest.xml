@@ -22,7 +22,8 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.epicodus.dementiacarejournal.ui.LoginActivity" />
         </activity>
-        <activity android:name=".ui.Create_Profile_Activity"></activity>
+        <activity android:name=".ui.Create_Profile_Activity" />
+        <activity android:name=".ui.EditProfileActivity"></activity>
     </application>
 
 </manifest>
