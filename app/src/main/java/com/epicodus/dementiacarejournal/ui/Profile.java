@@ -24,11 +24,16 @@ import com.epicodus.dementiacarejournal.adapters.SectionsPageAdapter;
 
 public class Profile extends AppCompatActivity {
     private SectionsPageAdapter mSectionsPageAdapter;
+    private ViewPager mViewPager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
+
+        mSectionsPageAdapter = new SectionsPageAdapter(getSupportFragmentManager());
+        mViewPager = (ViewPager) findViewById(R.id.container);
+        setupViewPager(mViewPager);
     }
 
     private void setupViewPager(ViewPager viewPager){
