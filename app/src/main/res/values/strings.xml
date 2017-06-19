@@ -31,4 +31,15 @@
     <string name="diet">Diet</string>
     <string name="medication">Medication</string>
 
+    <!--Profile Activities-->
+    <string name="userProfileTitle">User Profile</string>
+    <string name="userPhoneHint">"(800) 273-8255"</string>
+    <string name="patientTitle">Profile of Person With Dementia</string>
+    <string name="patientFirstNameHint">First Name</string>
+    <string name="patientLastNameHint">Last Name</string>
+    <string name="patientDob">Date of Birth</string>
+    <string name="saveButton">Save</string>
+    <string name="doctorName">"Primary Doctor's Name"</string>
+    <string name="doctorEmail">"Doctor's Email Address"</string>
+    <string name="doctorPhone">"Doctor's Phone Number"</string>
 </resources>

@@ -6,11 +6,23 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.widget.EditText;
 
 import com.epicodus.dementiacarejournal.R;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+
+import butterknife.Bind;
 
 public class Create_Profile_Activity extends AppCompatActivity {
+
+    @Bind(R.id.userName) EditText caregiverName;
+    @Bind(R.id.userEmail) EditText caregiverEmail;
+    @Bind(R.id.userPassword) EditText caregiverPassword;
+    @Bind(R.id.userPhone) EditText caregiverPhone;
+    @Bind(R.id.patientFirstName) EditText patientFirstName;
+    @Bind(R.id.patientLastName) EditText patientLastName;
+    @Bind(R.id.patientDob) EditText patientDob;
 
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthListener;
@@ -19,6 +31,8 @@ public class Create_Profile_Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create__profile_);
+
+
     }
 
     @Override
