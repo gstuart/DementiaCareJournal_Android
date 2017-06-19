@@ -41,8 +41,8 @@ public class Profile extends AppCompatActivity {
 
     private void setupViewPager(ViewPager viewPager){
         SectionsPageAdapter adapter = new SectionsPageAdapter(getSupportFragmentManager());
-        adapter.addFragment(new UserProfileFragment(), "Caregiver Profile");
         adapter.addFragment(new PatientProfileFragment(), "Patient Profile");
+        adapter.addFragment(new UserProfileFragment(), "Caregiver Profile");
         viewPager.setAdapter(adapter);
     }
 }
