@@ -74,6 +74,6 @@
         android:text="@string/saveButton"
         android:textColor="@color/colorText"
         android:layout_marginBottom="36dp"
-        android:layout_alignParentBottom="true"
+        android:layout_below="@id/userPhone"
         android:layout_centerHorizontal="true" />
 </RelativeLayout>

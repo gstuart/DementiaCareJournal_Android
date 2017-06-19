@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
 
         }
         if (v == mProfileButton) {
-            Intent intent = new Intent(MainActivity.this, Create_Profile_Activity.class); //TODO change create_profile_activity to the ViewProfileActivity
+            Intent intent = new Intent(MainActivity.this, Profile.class); //TODO change create_profile_activity to the ViewProfileActivity
             startActivity(intent);
         }
     }
