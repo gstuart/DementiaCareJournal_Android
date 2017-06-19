@@ -20,9 +20,10 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.epicodus.dementiacarejournal.R;
+import com.epicodus.dementiacarejournal.adapters.SectionsPageAdapter;
 
 public class Profile extends AppCompatActivity {
-
+    private SectionsPageAdapter mSectionsPageAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
