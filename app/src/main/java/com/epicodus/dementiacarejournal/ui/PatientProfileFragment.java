@@ -26,5 +26,7 @@ public class PatientProfileFragment extends Fragment implements View.OnClickList
     @Override
     public void onClick(View v) {
 
+//        TODO add functionality to save entered information into database as Patient object
+
     }
 }
