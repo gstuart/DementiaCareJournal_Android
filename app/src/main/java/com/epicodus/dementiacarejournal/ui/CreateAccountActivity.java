@@ -12,6 +12,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.epicodus.dementiacarejournal.R;
+import com.epicodus.dementiacarejournal.models.Caregiver;
 import com.epicodus.dementiacarejournal.ui.MainActivity;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -19,6 +20,8 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.UserProfileChangeRequest;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -37,6 +40,9 @@ public class CreateAccountActivity extends AppCompatActivity implements View.OnC
     private FirebaseAuth.AuthStateListener mAuthListener;
     private ProgressDialog mAuthProgressDialog;
     private String mDisplayName;
+    private String mPhone;
+    private String mEmail;
+    private String mLastName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -138,34 +144,42 @@ public class CreateAccountActivity extends AppCompatActivity implements View.OnC
 
     private void createNewUser() {
         mDisplayName = mFirstNameEditText.getText().toString().trim();
-        String lastName = mLastNameEditText.getText().toString().trim();
-        String phone = mphoneEditText.getText().toString().trim();
-        final String email = mEmailEditText.getText().toString().trim();
-        String password = mPasswordEditText.getText().toString().trim();
+        mLastName = mLastNameEditText.getText().toString().trim();
+        mPhone = mphoneEditText.getText().toString().trim();
+        mEmail = mEmailEditText.getText().toString().trim();
+        final String password = mPasswordEditText.getText().toString().trim();
         String confirmPassword = mConfirmPasswordEditText.getText().toString().trim();
 
-        boolean validEmail = isValidEmail(email);
+        boolean validEmail = isValidEmail(mEmail);
         boolean validFirstName = isValidFirstName(mDisplayName);
-        boolean validLastName = isValidLastName(lastName);
-        boolean validPhone = isValidPhone(phone);
+        boolean validLastName = isValidLastName(mLastName);
+        boolean validPhone = isValidPhone(mPhone);
 
         boolean validPassword = isValidPassword(password, confirmPassword);
         if (!validEmail || !validFirstName || !validLastName|| !validPhone || !validPassword) return;
 
         mAuthProgressDialog.show();
 
-        mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(this, new OnCompleteListener< AuthResult>() {
+        mAuth.createUserWithEmailAndPassword(mEmail, password).addOnCompleteListener(this, new OnCompleteListener< AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 mAuthProgressDialog.dismiss();
 
                 if (task.isSuccessful()) {
+                    createCaregiver();
                     createFirebaseUserProfile(task.getResult().getUser());
                 } else {
                     Toast.makeText(CreateAccountActivity.this, "Authentication failed. Please try again.", Toast.LENGTH_LONG).show();
                 }
             }
         });
+    }
+
+    private void createCaregiver() {
+        Caregiver caregiver = new Caregiver(mDisplayName, mLastName, mEmail, mPhone);
+        FirebaseUser user = mAuth.getCurrentUser();
+        DatabaseReference ref = FirebaseDatabase.getInstance().getReference(user.getUid()).child("caregiver");
+        ref.setValue(caregiver);
     }
 
     public void createFirebaseUserProfile(final FirebaseUser user) {
@@ -183,5 +197,7 @@ public class CreateAccountActivity extends AppCompatActivity implements View.OnC
             }
         });
     }
+
+
 
 }
