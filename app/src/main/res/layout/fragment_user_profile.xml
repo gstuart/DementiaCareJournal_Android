@@ -2,7 +2,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
 
     <EditText
         android:id="@+id/firstNameEditText"
@@ -12,7 +13,8 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="60dp"
-        android:ems="10"/>
+        android:ems="10"
+        android:textColorHint="@color/colorText"/>
 
     <EditText
         android:id="@+id/lastNameEditText"
@@ -23,7 +25,8 @@
         android:layout_alignLeft="@+id/firstNameEditText"
         android:layout_alignStart="@+id/firstNameEditText"
         android:layout_marginTop="20dp"
-        android:ems="10" />
+        android:ems="10"
+        android:textColorHint="@color/colorText"/>
 
     <EditText
         android:id="@+id/emailEditText"
@@ -34,7 +37,8 @@
         android:layout_alignLeft="@+id/lastNameEditText"
         android:layout_alignStart="@+id/lastNameEditText"
         android:layout_marginTop="20dp"
-        android:ems="10" />
+        android:ems="10"
+        android:textColorHint="@color/colorText"/>
 
     <EditText
         android:id="@+id/userPassword"
@@ -46,7 +50,8 @@
         android:layout_marginTop="20dp"
         android:layout_below="@+id/emailEditText"
         android:layout_alignLeft="@+id/emailEditText"
-        android:layout_alignStart="@+id/emailEditText" />
+        android:layout_alignStart="@+id/emailEditText"
+        android:textColorHint="@color/colorText"/>
 
     <EditText
         android:id="@+id/userPhone"
@@ -58,7 +63,8 @@
         android:layout_below="@+id/userPassword"
         android:layout_alignLeft="@+id/userPassword"
         android:layout_alignStart="@+id/userPassword"
-        android:layout_marginTop="20dp" />
+        android:layout_marginTop="20dp"
+        android:textColorHint="@color/colorText"/>
 
     <Button
         android:id="@+id/saveButton"
