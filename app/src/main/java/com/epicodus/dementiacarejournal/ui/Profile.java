@@ -29,6 +29,12 @@ public class Profile extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
+    }
 
+    private void setupViewPager(ViewPager viewPager){
+        SectionsPageAdapter adapter = new SectionsPageAdapter(getSupportFragmentManager());
+        adapter.addFragment(new UserProfileFragment(), "Caregiver Profile");
+        adapter.addFragment(new PatientProfileFragment(), "Patient Profile");
+        viewPager.setAdapter(adapter);
     }
 }
