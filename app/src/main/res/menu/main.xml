@@ -6,9 +6,9 @@
         android:title="@string/logout"
         android:visible="true"
         app:showAsAction="never" />
-    <item
-        android:id="@+id/action_profile"
-        android:title="Profile"
-        android:visible="true"
-        app:showsAsAction="never" />
+    <!--<item-->
+        <!--android:id="@+id/action_profile"-->
+        <!--android:title="Profile"-->
+        <!--android:visible="true"-->
+        <!--app:showsAsAction="never" />-->
 </menu>
