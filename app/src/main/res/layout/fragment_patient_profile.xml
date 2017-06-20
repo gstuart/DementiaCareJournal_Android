@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
+
+    <EditText
+        android:id="@+id/firstNameEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/patientFirstNameHint"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:ems="10"
+        android:textColorHint="@color/colorText"/>
+
+    <EditText
+        android:id="@+id/lastNameEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/patientLastNameHint"
+        android:layout_below="@+id/firstNameEditText"
+        android:layout_alignLeft="@+id/firstNameEditText"
+        android:layout_alignStart="@+id/firstNameEditText"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:textColorHint="@color/colorText" />
+
+    <EditText
+        android:id="@+id/dobEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/patientDob"
+        android:layout_below="@+id/lastNameEditText"
+        android:layout_alignLeft="@+id/lastNameEditText"
+        android:layout_alignStart="@+id/lastNameEditText"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:textColorHint="@color/colorText" />
+
+    <EditText
+        android:id="@+id/doctorName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="@string/doctorName"
+        android:layout_below="@+id/dobEditText"
+        android:layout_alignLeft="@+id/dobEditText"
+        android:layout_alignStart="@+id/dobEditText"
+        android:layout_marginTop="20dp"
+        android:textColorHint="@color/colorText"/>
+
+    <EditText
+        android:id="@+id/doctorEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:hint="@string/doctorEmail"
+        android:layout_below="@+id/doctorName"
+        android:layout_alignLeft="@+id/doctorName"
+        android:layout_alignStart="@+id/doctorName"
+        android:layout_marginTop="20dp"
+        android:textColorHint="@color/colorText"/>
+
+    <EditText
+        android:id="@+id/doctorPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="phone"
+        android:hint="@string/doctorPhone"
+        android:layout_below="@+id/doctorEmail"
+        android:layout_alignLeft="@+id/doctorEmail"
+        android:layout_alignStart="@+id/doctorEmail"
+        android:layout_marginTop="20dp"
+        android:textColorHint="@color/colorText"/>
+
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:text="@string/saveButton"
+        android:textColor="@color/colorText"
+        android:layout_below="@id/doctorPhone"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>
