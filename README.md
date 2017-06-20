@@ -35,7 +35,7 @@ Caring for someone you love who has dementia is daunting. Knowing what behaviors
 *  In Android Studio, `Run` project
 
 ### Screen Shots
-<img src="/app/src/main/res/drawable/screenshots/home.png" alt="Home" width="250"> <img src="/app/src/main/res/drawable/screenshots/about.png" alt="About" width="250"> <img src="/app/src/main/res/drawable/screenshots/signin.png" alt="Sign In" width="250"> <img src="/app/src/main/res/drawable/screenshots/registration.png" alt="Registration" width="250"> 
+<img src="/app/src/main/res/drawable/screenshots/registration.png" alt="Home" width="250"> <img src="/app/src/main/res/drawable/screenshots/signin.png" alt="About" width="250"> <img src="/app/src/main/res/drawable/screenshots/main.png" alt="Sign In" width="250"> <img src="/app/src/main/res/drawable/screenshots/patientprofile.png" alt="Registration" width="250"> 
 
 
 ## Known Bugs (Listed In Priority Order)
