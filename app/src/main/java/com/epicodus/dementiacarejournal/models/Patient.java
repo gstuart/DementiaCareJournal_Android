@@ -7,13 +7,19 @@ public class Patient {
     private String mFirstName;
     private String mLastName;
     private String mDob;
+    private String mDrName;
+    private String mDrEmail;
+    private String mDrPhone;
     private ArrayList<String> mMedications = new ArrayList<>();
     private ArrayList<String> mLogs = new ArrayList<>();
 
-    public Patient(String firstName, String lastName, String DOB, ArrayList<String> medications, ArrayList<String> logs) {
+    public Patient(String firstName, String lastName, String DOB, String DrName, String DrEmail, String DrPhone, ArrayList<String> medications, ArrayList<String> logs) {
         this.mFirstName = firstName;
         this.mLastName = lastName;
         this.mDob = DOB;
+        this.mDrName = DrName;
+        this.mDrEmail = DrEmail;
+        this.mDrPhone = DrPhone;
         this.mMedications = medications;
         this.mLogs = logs;
     }
@@ -28,6 +34,18 @@ public class Patient {
 
     public String getDob() {
         return mDob;
+    }
+
+    public String getDrName() {
+        return mDrName;
+    }
+
+    public String getDrEmail() {
+        return mDrEmail;
+    }
+
+    public String getDrPhone() {
+        return mDrPhone;
     }
 
     public ArrayList<String> getMedications() {
