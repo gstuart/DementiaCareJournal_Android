@@ -35,14 +35,14 @@ public class Profile extends AppCompatActivity {
         mViewPager = (ViewPager) findViewById(R.id.container);
         setupViewPager(mViewPager);
 
-        TabLayout  tabLayout = (TabLayout) findViewById(R.id.tabs);
-        tabLayout.setupWithViewPager(mViewPager);
+//        TabLayout  tabLayout = (TabLayout) findViewById(R.id.tabs);
+//        tabLayout.setupWithViewPager(mViewPager);
     }
 
     private void setupViewPager(ViewPager viewPager){
         SectionsPageAdapter adapter = new SectionsPageAdapter(getSupportFragmentManager());
         adapter.addFragment(new PatientProfileFragment(), "Patient Profile");
-        adapter.addFragment(new UserProfileFragment(), "Caregiver Profile");
+//        adapter.addFragment(new UserProfileFragment(), "Caregiver Profile");
         viewPager.setAdapter(adapter);
     }
 }
