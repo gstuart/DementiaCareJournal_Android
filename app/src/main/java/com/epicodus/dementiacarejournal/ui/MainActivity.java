@@ -37,7 +37,8 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
     @Override
     public void onClick(View v) {
         if (v == mJournalButton) {
-
+            Intent intent = new Intent(MainActivity.this, BehaviorLog.class);
+            startActivity(intent);
         }
 //        if (v == mProfileButton) {
 //            Intent intent = new Intent(MainActivity.this, Profile.class);

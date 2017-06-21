@@ -46,4 +46,7 @@
     <string name="doctorName">"Primary Doctor's Name"</string>
     <string name="doctorEmail">"Doctor's Email Address"</string>
     <string name="doctorPhone">"Doctor's Phone Number"</string>
+
+    <!--Log Activities-->
+    <string name="notes">Notes</string>
 </resources>

@@ -8,7 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import com.epicodus.dementiacarejournal.R;
 import com.epicodus.dementiacarejournal.adapters.SectionsPageAdapter;
 
-public class Jounal extends AppCompatActivity {
+public class Journal extends AppCompatActivity {
     private SectionsPageAdapter mSectionsPageAdapter;
     private ViewPager mViewPager;
 
@@ -27,7 +27,7 @@ public class Jounal extends AppCompatActivity {
 
     private void setupViewPager(ViewPager viewPager){
         SectionsPageAdapter adapter = new SectionsPageAdapter(getSupportFragmentManager());
-        adapter.addFragment(new BehaviorLogFragment(), "Behaviors");
+//        adapter.addFragment(new BehaviorLogFragment(), "Behaviors");
 //        adapter.addFragment(new EmotionLogFragment(), "Emotions");
 //        adapter.addFragment(new ActivityLogFragment(), "Activities");
         viewPager.setAdapter(adapter);
