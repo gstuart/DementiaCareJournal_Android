@@ -1,40 +1,50 @@
 package com.epicodus.dementiacarejournal.ui;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.SparseBooleanArray;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
-import android.widget.AdapterView.OnItemClickListener;
 import android.widget.Toast;
 
 import com.epicodus.dementiacarejournal.R;
 
 import butterknife.Bind;
 
-public class BehaviorLog extends AppCompatActivity implements View.OnClickListener {
+public class EmotionLog extends AppCompatActivity implements View.OnClickListener {
     @Bind(R.id.saveButton) Button mSaveButton;
 
     ListView listview;
     String[] ListViewItems = new String[] {
-            "Agitation",
-            "Eating",
-            "Good hygiene",
-            "Hallucinations",
-            "Incontinence",
-            "Paranoia",
-            "Repetitive speech or actions (Perseveration)",
-            "Self dressing",
-            "Sexually inappropriate behavior",
-            "Shadowing, imitates and follows the caregiver",
-            "Sleeplessness/Sundowning",
-            "Uncooperative and resistant",
-            "Verbal outbursts",
-            "Wandering"
+            "Serenity",
+            "Joy",
+            "Ecstasy",
+            "Acceptance",
+            "Trust",
+            "Admiration",
+            "Apprehension",
+            "Fear",
+            "Terror",
+            "Distration",
+            "Surprise",
+            "Amazement",
+            "Pensiveness",
+            "Sadness",
+            "Grief",
+            "Boredom",
+            "Disgust",
+            "Loathing",
+            "Annoyance",
+            "Anger",
+            "Rage",
+            "Interest",
+            "Anticipation",
+            "Vigilance"
     };
 
     SparseBooleanArray sparseBooleanArray ;
@@ -47,7 +57,7 @@ public class BehaviorLog extends AppCompatActivity implements View.OnClickListen
         listview = (ListView)findViewById(R.id.listView);
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>
-                (BehaviorLog.this,
+                (EmotionLog.this,
                         android.R.layout.simple_list_item_multiple_choice,
                         android.R.id.text1, ListViewItems );
 
@@ -74,8 +84,6 @@ public class BehaviorLog extends AppCompatActivity implements View.OnClickListen
 
                 ValueHolder = ValueHolder.replaceAll("(,)*$", "");
 
-                Toast.makeText(BehaviorLog.this, "Selected Values = " + ValueHolder, Toast.LENGTH_LONG).show();
-
             }
         });
     }
@@ -83,7 +91,7 @@ public class BehaviorLog extends AppCompatActivity implements View.OnClickListen
     @Override
     public void onClick(View v) {
         if (v == mSaveButton) {
-            Intent intent = new Intent(BehaviorLog.this, EmotionLog.class);
+            Intent intent = new Intent(EmotionLog.this, ActivityLog.class);
             startActivity(intent);
         }
 }
