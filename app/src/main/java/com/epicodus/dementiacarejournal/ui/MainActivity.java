@@ -16,7 +16,7 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 
 public class MainActivity extends AppCompatActivity  implements View.OnClickListener{
-    @Bind(R.id.profileButton) Button mProfileButton;
+//    @Bind(R.id.profileButton) Button mProfileButton;
     @Bind(R.id.journalButton) Button mJournalButton;
 
     private FirebaseAuth mAuth;
@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
 
-        mProfileButton.setOnClickListener(this);
+//        mProfileButton.setOnClickListener(this);
         mJournalButton.setOnClickListener(this);
 
     }
@@ -39,10 +39,10 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
         if (v == mJournalButton) {
 
         }
-        if (v == mProfileButton) {
-            Intent intent = new Intent(MainActivity.this, Profile.class);
-            startActivity(intent);
-        }
+//        if (v == mProfileButton) {
+//            Intent intent = new Intent(MainActivity.this, Profile.class);
+//            startActivity(intent);
+//        }
     }
 
     @Override
