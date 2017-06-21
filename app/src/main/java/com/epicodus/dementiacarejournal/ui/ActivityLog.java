@@ -10,42 +10,20 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import com.epicodus.dementiacarejournal.R;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
-public class EmotionLog extends AppCompatActivity implements View.OnClickListener {
+public class ActivityLog extends AppCompatActivity implements View.OnClickListener {
     @Bind(R.id.saveButton) Button mSaveButton;
 
     ListView listview;
     String[] ListViewItems = new String[] {
-            "Serenity",
-            "Joy",
-            "Ecstasy",
-            "Acceptance",
-            "Trust",
-            "Admiration",
-            "Apprehension",
-            "Fear",
-            "Terror",
-            "Distration",
-            "Surprise",
-            "Amazement",
-            "Pensiveness",
-            "Sadness",
-            "Grief",
-            "Boredom",
-            "Disgust",
-            "Loathing",
-            "Annoyance",
-            "Anger",
-            "Rage",
-            "Interest",
-            "Anticipation",
-            "Vigilance"
+            "Sleeping",
+            "Watching TV",
+            "Shopping"
     };
 
     SparseBooleanArray sparseBooleanArray ;
@@ -53,15 +31,15 @@ public class EmotionLog extends AppCompatActivity implements View.OnClickListene
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_emotion_log);
+        setContentView(R.layout.activity_behavior_log);
+
         ButterKnife.bind(this);
         mSaveButton.setOnClickListener(this);
-
 
         listview = (ListView)findViewById(R.id.listView);
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>
-                (EmotionLog.this,
+                (ActivityLog.this,
                         android.R.layout.simple_list_item_multiple_choice,
                         android.R.id.text1, ListViewItems );
 
@@ -95,7 +73,7 @@ public class EmotionLog extends AppCompatActivity implements View.OnClickListene
     @Override
     public void onClick(View v) {
         if (v == mSaveButton) {
-            Intent intent = new Intent(EmotionLog.this, ActivityLog.class);
+            Intent intent = new Intent(ActivityLog.this, MainActivity.class);
             startActivity(intent);
         }
     }

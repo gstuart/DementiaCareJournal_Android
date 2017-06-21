@@ -15,6 +15,7 @@ import android.widget.Toast;
 import com.epicodus.dementiacarejournal.R;
 
 import butterknife.Bind;
+import butterknife.ButterKnife;
 
 public class BehaviorLog extends AppCompatActivity implements View.OnClickListener {
     @Bind(R.id.saveButton) Button mSaveButton;
@@ -43,6 +44,9 @@ public class BehaviorLog extends AppCompatActivity implements View.OnClickListen
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_behavior_log);
+        ButterKnife.bind(this);
+
+        mSaveButton.setOnClickListener(this);
 
         listview = (ListView)findViewById(R.id.listView);
 
@@ -86,4 +90,5 @@ public class BehaviorLog extends AppCompatActivity implements View.OnClickListen
             Intent intent = new Intent(BehaviorLog.this, EmotionLog.class);
             startActivity(intent);
         }
+    }
 }
