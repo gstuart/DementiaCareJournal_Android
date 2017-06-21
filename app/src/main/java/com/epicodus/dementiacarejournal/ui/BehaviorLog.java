@@ -52,7 +52,7 @@ public class BehaviorLog extends AppCompatActivity {
         {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                // TODO Auto-generated method stub
+                // TODO 6/30 Save selected items to the database with a timestamp
 
                 sparseBooleanArray = listview.getCheckedItemPositions();
 
