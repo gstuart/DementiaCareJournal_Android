@@ -69,7 +69,7 @@ public class BehaviorLog extends AppCompatActivity {
 
                 ValueHolder = ValueHolder.replaceAll("(,)*$", "");
 
-                Toast.makeText(BehaviorLog.this, "ListView Selected Values = " + ValueHolder, Toast.LENGTH_LONG).show();
+                Toast.makeText(BehaviorLog.this, "Selected Values = " + ValueHolder, Toast.LENGTH_LONG).show();
 
             }
         });
