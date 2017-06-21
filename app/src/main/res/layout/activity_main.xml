@@ -17,34 +17,31 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
-    <Button
-        android:id="@+id/profileButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/profileButton"
-        android:textSize="15sp"
-        android:background="@color/colorAccent"
-        android:textColor="@color/colorText"
-        android:layout_marginBottom="23dp"
-        android:layout_marginLeft="53dp"
-        android:layout_marginStart="53dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+    <!--<Button-->
+        <!--android:id="@+id/profileButton"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="@string/profileButton"-->
+        <!--android:textSize="15sp"-->
+        <!--android:background="@color/colorAccent"-->
+        <!--android:textColor="@color/colorText"-->
+        <!--android:layout_marginBottom="23dp"-->
+        <!--android:layout_marginLeft="53dp"-->
+        <!--android:layout_marginStart="53dp"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_alignParentLeft="true"-->
+        <!--android:layout_alignParentStart="true" />-->
 
     <Button
         android:id="@+id/journalButton"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/journalButton"
         android:textSize="15sp"
         android:textColor="@color/colorText"
         android:background="@color/colorAccent"
-        android:layout_alignBaseline="@+id/profileButton"
-        android:layout_alignBottom="@+id/profileButton"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginRight="53dp"
-        android:layout_marginEnd="53dp" />
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
 </RelativeLayout>
