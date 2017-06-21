@@ -3,7 +3,7 @@
 
     <!--Main Activity-->
     <string name="profileButton">Profile</string>
-    <string name="journalButton">Journal</string>
+    <string name="journalButton">Begin Journaling</string>
 
     <!-- Login Activity -->
     <string name="prompt_email">Email</string>
@@ -50,7 +50,7 @@
     <!--Log Activities-->
     <string name="notes">Notes</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!--BehaviorLog-->
+    <string name="BehaviorLogButton">Save and Continue Journaling</string>
 
 </resources>
