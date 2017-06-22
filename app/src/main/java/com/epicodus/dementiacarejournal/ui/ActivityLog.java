@@ -22,9 +22,22 @@ public class ActivityLog extends AppCompatActivity implements View.OnClickListen
 
     ListView listview;
     String[] ListViewItems = new String[] {
+            "Caring For Pet Or Person",
+            "Cooking",
+            "Eating Out",
+            "Exercising",
+            "Games",
+            "Hobby",
+            "Interacting With Pet",
+            "Occupational Therapy",
+            "Physical Therapy",
+            "Reading",
+            "Shopping",
             "Sleeping",
+            "Socializing",
+            "Walking",
             "Watching TV",
-            "Shopping"
+            "Yard Work"
     };
 
     SparseBooleanArray sparseBooleanArray ;
