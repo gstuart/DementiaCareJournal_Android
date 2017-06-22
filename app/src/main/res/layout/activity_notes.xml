@@ -16,4 +16,14 @@
         android:layout_marginTop="137dp"
         android:layout_centerHorizontal="true" />
 
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:text="@string/saveButton"
+        android:textColor="@color/colorText"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
 </RelativeLayout>
