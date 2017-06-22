@@ -47,10 +47,10 @@
     <string name="doctorEmail">"Doctor's Email Address"</string>
     <string name="doctorPhone">"Doctor's Phone Number"</string>
 
-    <!--Log Activities-->
-    <string name="notes">Notes</string>
+    <!--Note Activities-->
+    <string name="notes">Add any comments, or additional notes you would like to journal.</string>
 
-    <!--BehaviorLog-->
+    <!--Logs-->
     <string name="BehaviorLogButton">Save and Continue Journaling</string>
     <string name="behaviorTitle">Behaviors</string>
 
