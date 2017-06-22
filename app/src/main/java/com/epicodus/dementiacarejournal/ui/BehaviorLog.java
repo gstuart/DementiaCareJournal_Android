@@ -46,7 +46,7 @@ public class BehaviorLog extends AppCompatActivity implements View.OnClickListen
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_behavior_log);
+        setContentView(R.layout.activity_log);
         ButterKnife.bind(this);
 
         mSaveButton.setOnClickListener(this);

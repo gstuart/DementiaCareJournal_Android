@@ -10,7 +10,6 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import com.epicodus.dementiacarejournal.R;
 
@@ -53,7 +52,7 @@ public class EmotionLog extends AppCompatActivity implements View.OnClickListene
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_behavior_log);
+        setContentView(R.layout.activity_log);
         ButterKnife.bind(this);
         mSaveButton.setOnClickListener(this);
 
