@@ -53,7 +53,7 @@ public class EmotionLog extends AppCompatActivity implements View.OnClickListene
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_emotion_log);
+        setContentView(R.layout.activity_behavior_log);
         ButterKnife.bind(this);
         mSaveButton.setOnClickListener(this);
 
