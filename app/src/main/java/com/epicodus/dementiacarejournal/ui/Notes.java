@@ -10,6 +10,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.epicodus.dementiacarejournal.R;
 
@@ -33,6 +34,7 @@ public class Notes extends AppCompatActivity implements  View.OnClickListener {
     public void onClick(View v) {
         if (v == mSaveButton) {
             Intent intent = new Intent(Notes.this, MainActivity.class);
+            Toast.makeText(Notes.this, "Note Logged", Toast.LENGTH_SHORT).show();
             startActivity(intent);
         }
     }

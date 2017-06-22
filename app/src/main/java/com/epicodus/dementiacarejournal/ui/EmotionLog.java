@@ -10,6 +10,7 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.epicodus.dementiacarejournal.R;
 
@@ -95,6 +96,7 @@ public class EmotionLog extends AppCompatActivity implements View.OnClickListene
     public void onClick(View v) {
         if (v == mSaveButton) {
             Intent intent = new Intent(EmotionLog.this, ActivityLog.class);
+            Toast.makeText(EmotionLog.this, "Selected Items Logged", Toast.LENGTH_SHORT).show();
             startActivity(intent);
         }
     }

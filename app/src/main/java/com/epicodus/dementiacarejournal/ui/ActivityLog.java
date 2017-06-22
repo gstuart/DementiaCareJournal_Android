@@ -10,6 +10,7 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.epicodus.dementiacarejournal.R;
 
@@ -74,6 +75,7 @@ public class ActivityLog extends AppCompatActivity implements View.OnClickListen
     public void onClick(View v) {
         if (v == mSaveButton) {
             Intent intent = new Intent(ActivityLog.this, Notes.class);
+            Toast.makeText(ActivityLog.this, "Selected Items Logged", Toast.LENGTH_SHORT).show();
             startActivity(intent);
         }
     }
