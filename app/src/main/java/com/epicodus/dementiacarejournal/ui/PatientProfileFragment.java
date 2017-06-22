@@ -63,7 +63,7 @@ public class PatientProfileFragment extends Fragment implements View.OnClickList
     public void onClick(View v) {
         if (v == mSaveButton) {
             createNewPatient();
-            Intent intent = new Intent(getActivity(), MainActivity.class); //TODO change main activity to JournalActivity.class
+            Intent intent = new Intent(getActivity(), MainActivity.class);
             startActivity(intent);
         }
     }
