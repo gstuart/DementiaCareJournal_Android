@@ -3,7 +3,7 @@
 
     <!--Main Activity-->
     <string name="profileButton">Profile</string>
-    <string name="journalButton">Journal</string>
+    <string name="journalButton">Begin Journaling</string>
 
     <!-- Login Activity -->
     <string name="prompt_email">Email</string>
@@ -46,4 +46,12 @@
     <string name="doctorName">"Primary Doctor's Name"</string>
     <string name="doctorEmail">"Doctor's Email Address"</string>
     <string name="doctorPhone">"Doctor's Phone Number"</string>
+
+    <!--Log Activities-->
+    <string name="notes">Notes</string>
+
+    <!--BehaviorLog-->
+    <string name="BehaviorLogButton">Save and Continue Journaling</string>
+    <string name="behaviorTitle">Behaviors</string>
+
 </resources>
