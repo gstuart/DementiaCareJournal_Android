@@ -80,9 +80,6 @@ public class BehaviorLog extends AppCompatActivity implements View.OnClickListen
                 }
 
                 ValueHolder = ValueHolder.replaceAll("(,)*$", "");
-
-                Toast.makeText(BehaviorLog.this, "Selected Values = " + ValueHolder, Toast.LENGTH_LONG).show();
-
             }
         });
     }
@@ -91,6 +88,7 @@ public class BehaviorLog extends AppCompatActivity implements View.OnClickListen
     public void onClick(View v) {
         if (v == mSaveButton) {
             Intent intent = new Intent(BehaviorLog.this, EmotionLog.class);
+            Toast.makeText(BehaviorLog.this, "Selected Items Logged", Toast.LENGTH_SHORT).show();
             startActivity(intent);
         }
     }
