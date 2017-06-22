@@ -35,15 +35,7 @@ Caring for someone you love who has dementia is daunting. Knowing what behaviors
 *  In Android Studio, `Run` project
 
 ### Screen Shots
-<img src="/app/src/main/res/drawable/screenshots/signin.png" alt="Sign In" width="250">
-<img src="/app/src/main/res/drawable/screenshots/registration.png" alt="Home" width="250"> 
-<img src="/app/src/main/res/drawable/screenshots/patientprofile.png" alt="About" width="250">
-<img src="/app/src/main/res/drawable/screenshots/journal.png" alt="Registration" width="250">
- <img src="/app/src/main/res/drawable/screenshots/behaviors.png" alt="Journal" width="250">
- <img src="/app/src/main/res/drawable/screenshots/Emotions.png" alt="Behaviors" width="250">
- <img src="/app/src/main/res/drawable/screenshots/activities.png" alt="Emotions" width="250">
- <img src="/app/src/main/res/drawable/screenshots/notes.png" alt="Activites" width="250">
- <img src="/app/src/main/res/drawable/screenshots/overflow.png" alt="Notes" width="250">
+<img src="/app/src/main/res/drawable/screenshots/signin.png" alt="Sign In" width="250"><img src="/app/src/main/res/drawable/screenshots/registration.png" alt="Registration" width="250"><img src="/app/src/main/res/drawable/screenshots/patientprofile.png" alt="Patient Profile" width="250"><img src="/app/src/main/res/drawable/screenshots/journal.png" alt="Registration" width="250"><img src="/app/src/main/res/drawable/screenshots/behaviors.png" alt="Behaviors" width="250"><img src="/app/src/main/res/drawable/screenshots/emotions.png" alt="Emotions" width="250"><img src="/app/src/main/res/drawable/screenshots/activities.png" alt="Activites" width="250"><img src="/app/src/main/res/drawable/screenshots/notes.png" alt="Notes" width="250"><img src="/app/src/main/res/drawable/screenshots/overflow.png" alt="Overflow Menu" width="250">
 
 
 ## Known Bugs (Listed In Priority Order)
