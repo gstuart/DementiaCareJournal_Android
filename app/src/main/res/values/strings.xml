@@ -52,5 +52,6 @@
 
     <!--BehaviorLog-->
     <string name="BehaviorLogButton">Save and Continue Journaling</string>
+    <string name="behaviorTitle">Behaviors</string>
 
 </resources>
