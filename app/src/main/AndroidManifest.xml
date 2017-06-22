@@ -28,23 +28,28 @@
             android:name=".ui.Profile"
             android:label="@string/title_activity_profile"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".ui.BehaviorLog" android:label="Behaviors">
+        <activity
+            android:name=".ui.BehaviorLog"
+            android:label="Behaviors">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.epicodus.dementiacarejournal.ui.MainActivity" />
         </activity>
-
-        <activity android:name=".ui.EmotionLog" android:label="Emotions">
+        <activity
+            android:name=".ui.EmotionLog"
+            android:label="Emotions">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.epicodus.dementiacarejournal.ui.BehaviorLog" />
         </activity>
-
-        <activity android:name=".ui.ActivityLog" android:label="Activities">
+        <activity
+            android:name=".ui.ActivityLog"
+            android:label="Activities">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.epicodus.dementiacarejournal.ui.EmotionLog" />
         </activity>
+        <activity android:name=".ui.Notes" android:label="Notes"></activity>
     </application>
 
 </manifest>
