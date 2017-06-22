@@ -10,10 +10,12 @@
         android:id="@+id/noteEditText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textImeMultiLine"
-        android:text=""
-        android:layout_marginTop="137dp"
+        android:lines="20"
+        android:minLines="20"
+        android:gravity="top|left"
+        android:maxLines="20"
+        android:hint="@string/notes"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 
     <Button
