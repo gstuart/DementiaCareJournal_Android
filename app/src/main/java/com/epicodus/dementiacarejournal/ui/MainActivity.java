@@ -46,13 +46,7 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
 //            startActivity(intent);
 //        }
         if (v == mEmailButton) {
-            Intent emailIntent = new Intent(Intent.ACTION_SEND);
-            emailIntent.setData(Uri.parse("mailto:"));
-            emailIntent.setType("text/plain");
-            emailIntent.putExtra(Intent.EXTRA_EMAIL, new String[]{"Recipient"});
-            emailIntent.putExtra(Intent.EXTRA_SUBJECT, "subject");
-            emailIntent.putExtra(Intent.EXTRA_TEXT, "Message body");
-
+            sendEmail();
         }
     }
 
@@ -79,6 +73,23 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent);
         finish();
+    }
+
+    protected void sendEmail() {
+        Log.i("Send email", "");
+        String[] TO = {"recipient"};
+        String[] Subject = {"subject"}
+        String[] MessageBody = {"Message Body"};
+        Intent emailIntent = new Intent(Intent.ACTION_SEND);
+
+        emailIntent.setData(Uri.parse("mailto:"));
+        emailIntent.setType("text/plain");
+        emailIntent.putExtra(Intent.EXTRA_EMAIL, TO);
+        emailIntent.putExtra(Intent.EXTRA_SUBJECT, Subject);
+        emailIntent.putExtra(Intent.EXTRA_TEXT, MessageBody);
+
+
+
     }
 
 }
