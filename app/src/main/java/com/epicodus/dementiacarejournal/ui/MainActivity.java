@@ -48,6 +48,7 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
         if (v == mEmailButton) {
             Intent emailIntent = new Intent(Intent.ACTION_SEND);
             emailIntent.setData(Uri.parse("mailto:"));
+            emailIntent.setType("text/plain");
         }
     }
 
