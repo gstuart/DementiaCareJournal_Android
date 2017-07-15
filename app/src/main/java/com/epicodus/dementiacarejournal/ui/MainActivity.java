@@ -49,6 +49,10 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
             Intent emailIntent = new Intent(Intent.ACTION_SEND);
             emailIntent.setData(Uri.parse("mailto:"));
             emailIntent.setType("text/plain");
+            emailIntent.putExtra(Intent.EXTRA_EMAIL, new String[]{"Recipient"});
+            emailIntent.putExtra(Intent.EXTRA_SUBJECT, "subject");
+            emailIntent.putExtra(Intent.EXTRA_TEXT, "Message body");
+
         }
     }
 
