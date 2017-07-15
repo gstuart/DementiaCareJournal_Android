@@ -17,6 +17,7 @@ import butterknife.ButterKnife;
 
 public class MainActivity extends AppCompatActivity  implements View.OnClickListener{
 //    @Bind(R.id.profileButton) Button mProfileButton;
+    @Bind(R.id.emailButton) Button mEmailButton;
     @Bind(R.id.journalButton) Button mJournalButton;
 
     private FirebaseAuth mAuth;
@@ -44,6 +45,9 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
 //            Intent intent = new Intent(MainActivity.this, Profile.class);
 //            startActivity(intent);
 //        }
+        if (v == mEmailButton) {
+            Intent emailIntent = new Intent(Intent.ACTION_SEND);
+        }
     }
 
     @Override
