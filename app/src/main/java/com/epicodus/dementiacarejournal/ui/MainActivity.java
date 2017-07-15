@@ -88,7 +88,13 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
         emailIntent.putExtra(Intent.EXTRA_SUBJECT, Subject);
         emailIntent.putExtra(Intent.EXTRA_TEXT, MessageBody);
 
-
+        try {
+            startActivity(Intent.createChooser(emailIntent, "Send mail...."));
+            finish();
+            Log.i("Finished sending email", "");
+        } catch (android.content.ActivityNotFoundException ex) {
+            Toast.makeText(MainActivity.this, "There is no email client installed. Please Try again after installation.", Toast.LENGTH_LONG).show();
+        }
 
     }
 
