@@ -78,7 +78,7 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
     protected void sendEmail() {
         Log.i("Send email", "");
         String[] TO = {"recipient"};
-        String[] Subject = {"subject"}
+        String[] Subject = {"subject"};
         String[] MessageBody = {"Message Body"};
         Intent emailIntent = new Intent(Intent.ACTION_SEND);
 
