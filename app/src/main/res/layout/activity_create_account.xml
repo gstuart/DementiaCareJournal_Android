@@ -27,7 +27,8 @@
         android:layout_marginBottom="10dp"
         android:textColor="@android:color/black"
         android:textColorHint="@color/colorDivider"
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        android:nextFocusDown="@+id/lastNameEditText"/>
 
     <EditText
         android:id="@+id/lastNameEditText"
@@ -40,7 +41,8 @@
         android:layout_marginBottom="10dp"
         android:textColor="@android:color/black"
         android:textColorHint="@color/colorDivider"
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        android:nextFocusDown="@+id/phoneEditText"/>
 
     <EditText
         android:id="@+id/phoneEditText"
@@ -53,7 +55,8 @@
         android:layout_marginBottom="10dp"
         android:textColor="@android:color/black"
         android:textColorHint="@color/colorDivider"
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        android:nextFocusDown="@+id/emailEditText" />
 
     <EditText
         android:id="@+id/emailEditText"
@@ -67,7 +70,8 @@
         android:layout_marginBottom="10dp"
         android:textColor="@android:color/black"
         android:textColorHint="@color/colorDivider"
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        android:nextFocusDown="@+id/passwordEditText"/>
 
     <EditText
         android:id="@+id/passwordEditText"
@@ -81,7 +85,8 @@
         android:layout_marginBottom="10dp"
         android:textColor="@android:color/black"
         android:textColorHint="@color/colorDivider"
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        android:nextFocusDown="@+id/confirmPasswordEditText"/>
 
     <EditText
         android:id="@+id/confirmPasswordEditText"
@@ -95,7 +100,8 @@
         android:layout_marginBottom="10dp"
         android:textColor="@android:color/black"
         android:textColorHint="@color/colorDivider"
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        android:nextFocusDown="@+id/createUserButton"/>
 
 
     <Button
@@ -119,6 +125,7 @@
     android:textSize="30dp"
     android:textStyle="bold"
     android:layout_above="@+id/linearLayout"
-    android:layout_centerHorizontal="true" />
+    android:layout_centerHorizontal="true"
+    android:nextFocusDown="@+id/firstNameEditText"/>
 
 </RelativeLayout>
