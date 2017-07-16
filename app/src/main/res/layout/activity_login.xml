@@ -37,7 +37,7 @@
             android:background="@android:color/white"
             android:hint="@string/prompt_password"
             android:inputType="textPassword"
-            android:nextFocusDown="@+id/passwordEditText"
+            android:nextFocusDown="@+id/passwordLoginButton"
             android:padding="10dp"
             android:textColor="@android:color/black"
             android:textColorHint="@color/colorDivider"
@@ -53,7 +53,8 @@
             android:textSize="20sp"
             android:background="@color/colorAccent"
             android:layout_marginTop="15dp"
-            android:textColor="@color/colorText" />
+            android:textColor="@color/colorText"
+            android:nextFocusDown="@+id/registerTextView"/>
 
         <TextView
             android:layout_width="wrap_content"
