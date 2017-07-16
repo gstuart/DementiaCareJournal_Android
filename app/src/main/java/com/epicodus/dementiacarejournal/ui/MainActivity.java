@@ -15,6 +15,10 @@ import com.google.firebase.auth.FirebaseAuth;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
+import android.util.Log;
+import android.net.Uri;
+import android.widget.Toast;
+
 public class MainActivity extends AppCompatActivity  implements View.OnClickListener{
 //    @Bind(R.id.profileButton) Button mProfileButton;
     @Bind(R.id.emailButton) Button mEmailButton;
