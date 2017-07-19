@@ -81,24 +81,24 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
 
     protected void sendEmail() {
         Log.i("Send email", "");
-        String[] TO = {"recipient"};
-        String[] Subject = {"subject"};
-        String[] MessageBody = {"Message Body"};
-        Intent emailIntent = new Intent(Intent.ACTION_SEND);
+//        String[] TO = {"recipient"};
+//        String[] Subject = {"subject"};
+//        String[] MessageBody = {"Message Body"};
+//        Intent emailIntent = new Intent(Intent.ACTION_SEND);
+//
+//        emailIntent.setData(Uri.parse("mailto:"));
+//        emailIntent.setType("text/plain");
+//        emailIntent.putExtra(Intent.EXTRA_EMAIL, TO);
+//        emailIntent.putExtra(Intent.EXTRA_SUBJECT, Subject);
+//        emailIntent.putExtra(Intent.EXTRA_TEXT, MessageBody);
 
-        emailIntent.setData(Uri.parse("mailto:"));
-        emailIntent.setType("text/plain");
-        emailIntent.putExtra(Intent.EXTRA_EMAIL, TO);
-        emailIntent.putExtra(Intent.EXTRA_SUBJECT, Subject);
-        emailIntent.putExtra(Intent.EXTRA_TEXT, MessageBody);
-
-        try {
-            startActivity(Intent.createChooser(emailIntent, "Send mail...."));
-            finish();
-            Log.i("Finished sending email", "");
-        } catch (android.content.ActivityNotFoundException ex) {
-            Toast.makeText(MainActivity.this, "There is no email client installed. Please Try again after installation.", Toast.LENGTH_LONG).show();
-        }
+//        try {
+//            startActivity(Intent.createChooser(emailIntent, "Send mail...."));
+//            finish();
+//            Log.i("Finished sending email", "");
+//        } catch (android.content.ActivityNotFoundException ex) {
+//            Toast.makeText(MainActivity.this, "There is no email client installed. Please Try again after installation.", Toast.LENGTH_LONG).show();
+//        }
 
     }
 
