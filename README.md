@@ -50,7 +50,7 @@ Caring for someone you love who has dementia is daunting. Knowing what behaviors
 
 ## Sources
 * [Checkboxes in a list view](http://www.android-examples.com/create-listview-with-multiple-checkbox-in-android/)
-
+* [Splash screen](https://www.youtube.com/watch?v=ND6a4V-xdjI)
 
 ## Maintainer
 [Grace Stuart](href="https://github.com/gstuart")
