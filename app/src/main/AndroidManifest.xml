@@ -49,11 +49,14 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.epicodus.dementiacarejournal.ui.EmotionLog" />
         </activity>
-        <activity android:name=".ui.Notes" android:label="Notes">
+        <activity
+            android:name=".ui.Notes"
+            android:label="Notes">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.epicodus.dementiacarejournal.ui.ActivityLog" />
         </activity>
+        <activity android:name=".ui.SplashScreenActivity"></activity>
     </application>
 
 </manifest>
