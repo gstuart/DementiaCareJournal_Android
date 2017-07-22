@@ -11,13 +11,17 @@
         android:roundIcon="@drawable/main"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.MainActivity" />
-        <activity android:name=".ui.LoginActivity">
+        <activity
+            android:name=".ui.SplashScreenActivity"
+            android:theme="@style/AppTheme.NoActionBar" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+
+        <activity android:name=".ui.MainActivity" />
+        <activity android:name=".ui.LoginActivity">
         </activity>
         <activity android:name=".ui.CreateAccountActivity">
             <meta-data
@@ -56,6 +60,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.epicodus.dementiacarejournal.ui.ActivityLog" />
         </activity>
+
     </application>
 
 </manifest>
