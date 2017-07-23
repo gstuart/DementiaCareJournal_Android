@@ -36,7 +36,7 @@
     <!--Profile Activities (user and patient information)-->
     <string name="userProfileTitle">User Profile</string>
     <string name="userPhoneHint">(800) 273(-,&#8211;)8255</string>
-    <string name="patientTitle">Profile of Person With Dementia</string>
+    <string name="patientTitle">Profile of Dementia Patient</string>
     <string name="patientNameHint">"Patients(',&#8217;) Name"</string>
     <string name="patientDob">Date of Birth</string>
     <string name="saveButton">Save</string>
