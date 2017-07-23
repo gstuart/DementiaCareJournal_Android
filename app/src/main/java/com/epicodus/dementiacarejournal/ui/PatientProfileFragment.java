@@ -29,8 +29,7 @@ import butterknife.ButterKnife;
 
 public class PatientProfileFragment extends Fragment implements View.OnClickListener {
     @Bind(R.id.saveButton) Button mSaveButton;
-    @Bind(R.id.firstNameEditText) EditText mFirstName;
-    @Bind(R.id.lastNameEditText) EditText mLastName;
+    @Bind(R.id.patientNameEditText) EditText mPatientName;
     @Bind(R.id.dobEditText) EditText mDob;
     @Bind(R.id.doctorName) EditText mDrName;
     @Bind(R.id.doctorEmail)EditText mDrEmail;
@@ -38,8 +37,7 @@ public class PatientProfileFragment extends Fragment implements View.OnClickList
 
     private FirebaseAuth mAuth;
     private Button saveButton;
-    private String firstName;
-    private String lastName;
+    private String patientName;
     private String dob;
     private String drName;
     private String drEmail;
@@ -69,14 +67,13 @@ public class PatientProfileFragment extends Fragment implements View.OnClickList
     }
 
     private void createNewPatient() {
-        firstName = mFirstName.getText().toString().trim();
-        lastName = mLastName.getText().toString().trim();
+        patientName = mPatientName.getText().toString().trim();
         dob = mDob.getText().toString().trim();
         drName = mDrName.getText().toString().trim();
         drEmail = mDrEmail.getText().toString().trim();
         drPhone = mDrPhone.getText().toString().trim();
 
-        Patient patient = new Patient(firstName, lastName, dob, drName, drEmail, drPhone);
+        Patient patient = new Patient(patientName, dob, drName, drEmail, drPhone);
         FirebaseUser user = mAuth.getCurrentUser();
         DatabaseReference ref = FirebaseDatabase.getInstance().getReference(user.getUid()).child("patient");
         ref.setValue(patient);
