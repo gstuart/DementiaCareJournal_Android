@@ -48,7 +48,7 @@
             android:id="@+id/passwordLoginButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:nextFocusDown="@id/registerTextView"
+            android:nextFocusDown="@+id/registerTextView"
             android:padding="10dp"
             android:text="@string/action_sign_in"
             android:textSize="20sp"
