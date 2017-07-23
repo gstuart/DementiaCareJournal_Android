@@ -107,7 +107,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         }
 
     }
-
     private void loginWithPassword() {
         String email = mEmailEditText.getText().toString().trim();
         String password = mPasswordEditText.getText().toString().trim();
@@ -128,7 +127,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 Log.d(TAG, "signInWIthEmail:onComplete: " + task.isSuccessful());
                 if (!task.isSuccessful()) {
                     Log.w(TAG, "signInWithEmail", task.getException());
-                    Toast.makeText(LoginActivity.this, "Authentication failed.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LoginActivity.this, "Authentication failed because either your email or password is incorrect. Please try again.", Toast.LENGTH_LONG).show();
                 }
             }
         });

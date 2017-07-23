@@ -4,8 +4,7 @@ package com.epicodus.dementiacarejournal.models;
 import java.util.ArrayList;
 
 public class Patient {
-    private String mFirstName;
-    private String mLastName;
+    private String mPatientName;
     private String mDob;
     private String mDrName;
     private String mDrEmail;
@@ -13,9 +12,8 @@ public class Patient {
 //    private ArrayList<String> mMedications = new ArrayList<>();
 //    private ArrayList<String> mLogs = new ArrayList<>();
 
-    public Patient(String firstName, String lastName, String DOB, String DrName, String DrEmail, String DrPhone) {
-        this.mFirstName = firstName;
-        this.mLastName = lastName;
+    public Patient(String patientName, String DOB, String DrName, String DrEmail, String DrPhone) {
+        this.mPatientName = patientName;
         this.mDob = DOB;
         this.mDrName = DrName;
         this.mDrEmail = DrEmail;
@@ -24,12 +22,8 @@ public class Patient {
 //        this.mLogs = logs;
     }
 
-    public String getFirstName() {
-        return mFirstName;
-    }
-
-    public String getLastName() {
-        return mLastName;
+    public String getPatientName() {
+        return mPatientName;
     }
 
     public String getDob() {
