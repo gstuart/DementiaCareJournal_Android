@@ -29,7 +29,7 @@ import butterknife.ButterKnife;
 
 public class PatientProfileFragment extends Fragment implements View.OnClickListener {
     @Bind(R.id.saveButton) Button mSaveButton;
-    @Bind(R.id.patientNameEditText) EditText mPatientName;
+    @Bind(R.id.patientName) EditText mPatientName;
     @Bind(R.id.dobEditText) EditText mDob;
     @Bind(R.id.doctorName) EditText mDrName;
     @Bind(R.id.doctorEmail)EditText mDrEmail;
