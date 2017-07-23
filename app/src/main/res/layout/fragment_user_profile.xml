@@ -10,6 +10,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:hint="@string/patientFirstNameHint"
+        android:inputType="textPersonName"
+        android:nextFocusDown="@+id/lastNameEditText"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="60dp"
@@ -18,9 +20,11 @@
 
     <EditText
         android:id="@+id/lastNameEditText"
+        android:nextFocusDown="@+id/phoneEditText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:hint="@string/patientLastNameHint"
+        android:inputType="textPersonName"
         android:layout_below="@+id/firstNameEditText"
         android:layout_alignLeft="@+id/firstNameEditText"
         android:layout_alignStart="@+id/firstNameEditText"
@@ -29,7 +33,22 @@
         android:textColorHint="@color/colorText"/>
 
     <EditText
+        android:id="@+id/userPhone"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_alignLeft="@+id/emailEditText"
+        android:layout_alignStart="@+id/emailEditText"
+        android:layout_below="@+id/passwordEditText"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="@string/userPhoneHint"
+        android:inputType="phone"
+        android:nextFocusDown="@+id/saveButton"
+        android:textColorHint="@color/colorText" />
+
+    <EditText
         android:id="@+id/emailEditText"
+        android:nextFocusDown="@+id/saveButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:hint="@string/prompt_email"
@@ -38,19 +57,6 @@
         android:layout_alignStart="@+id/lastNameEditText"
         android:layout_marginTop="20dp"
         android:ems="10"
-        android:textColorHint="@color/colorText"/>
-
-    <EditText
-        android:id="@+id/userPhone"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="phone"
-        android:hint="@string/userPhoneHint"
-        android:layout_below="@+id/emailEditText"
-        android:layout_alignLeft="@+id/emailEditText"
-        android:layout_alignStart="@+id/emailEditText"
-        android:layout_marginTop="20dp"
         android:textColorHint="@color/colorText"/>
 
     <Button
