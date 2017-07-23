@@ -26,9 +26,10 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     public static final String TAG = LoginActivity.class.getSimpleName();
 
     @Bind(R.id.passwordLoginButton) Button mSignInButton;
-    @Bind(R.id.registerTextView) TextView mRegisterTextView;
     @Bind(R.id.emailEditText) EditText mEmailEditText;
     @Bind(R.id.passwordEditText) EditText mPasswordEditText;
+    @Bind(R.id.forgotPasswordTextView) TextView mForgotPasswordTextView;
+    @Bind(R.id.registerTextView) TextView mRegisterTextView;
 
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthListener;
@@ -39,9 +40,9 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         ButterKnife.bind(this);
-
         mSignInButton.setOnClickListener(this);
         mRegisterTextView.setOnClickListener(this);
+        mForgotPasswordTextView.setOnClickListener(this);
 
         mAuth = FirebaseAuth.getInstance();
         mAuthListener = new FirebaseAuth.AuthStateListener() {
@@ -84,6 +85,25 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         if (v == mRegisterTextView) {
             Intent intent = new Intent(LoginActivity.this, CreateAccountActivity.class);
             startActivity(intent);
+        }
+
+        if (v == mForgotPasswordTextView){
+            String email = mEmailEditText.getText().toString().trim();
+            if (email.equals("")) {
+               mEmailEditText.setError("Please enter your email.");
+            }
+            else {
+                FirebaseAuth auth = FirebaseAuth.getInstance();
+                auth.sendPasswordResetEmail(email)
+                    .addOnCompleteListener(new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        if (task.isSuccessful()) {
+                            Toast.makeText(LoginActivity.this, "Email sent with instructions to reset your password.", Toast.LENGTH_LONG).show();
+                        }
+                    }
+                });
+            }
         }
 
     }
