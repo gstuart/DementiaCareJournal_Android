@@ -1,6 +1,7 @@
 package com.epicodus.dementiacarejournal.ui;
 
 import android.content.Intent;
+import android.nfc.Tag;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -96,8 +97,6 @@ public class BehaviorLog extends AppCompatActivity implements View.OnClickListen
         {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                // TODO 6/30 Save selected items (String[]) to the database with a timestamp
-
                 sparseBooleanArray = listview.getCheckedItemPositions();
 
                 ValueHolder = new ArrayList<String>();
@@ -110,6 +109,7 @@ public class BehaviorLog extends AppCompatActivity implements View.OnClickListen
                     i++ ;
                 }
 //                ValueHolder = ValueHolder.replaceAll("(,)*$", "");
+                Log.i("Array contents", ValueHolder.toString());
             }
         });
     }
@@ -131,7 +131,7 @@ public class BehaviorLog extends AppCompatActivity implements View.OnClickListen
                 .child("behaviors");
 
         ref.push().setValue(ValueHolder);
-
+        Log.i("SAVE METHOD    ", ValueHolder.toString());
         Intent intent = new Intent(BehaviorLog.this, EmotionLog.class);
         startActivity(intent);
     }
