@@ -52,5 +52,24 @@
     <!--Logs-->
     <string name="BehaviorLogButton">Save and Continue Journaling</string>
     <string name="behaviorTitle">Behaviors</string>
+    <string-array name="behaviors">
+        <item>Agitation</item>
+        <item>Eating</item>
+        <item>Good hygiene</item>
+        <item>Hallucinations</item>
+        <item>Incoherient</item>
+        <item>Incontinence</item>
+        <item>Lethargic</item>
+        <item>Silent</item>
+        <item>Paranoia</item>
+        <item>Repetitive speech or actions (Perseveration)</item>
+        <item>Self dressing</item>
+        <item>Sexually inappropriate behavior</item>
+        <item>Shadowing, imitates and follows the caregiver</item>
+        <item>Sleeplessness/Sundowning</item>
+        <item>Uncooperative and resistant</item>
+        <item>Verbal outbursts</item>
+        <item>Wandering</item>
+    </string-array>
 
 </resources>
