@@ -36,25 +36,6 @@ public class BehaviorLog extends AppCompatActivity implements View.OnClickListen
 
     ListView listview;
     ArrayList<String> ListViewItems = new ArrayList<String>();
-// todo create an array which contains the following :
-//    ListViewItems.add(
-//            "Agitation",
-//            "Eating",
-//            "Good hygiene",
-//            "Hallucinations",
-//            "Incoherient",
-//            "Incontinence",
-//            "Lethargic",
-//            "Silent",
-//            "Paranoia",
-//            "Repetitive speech or actions (Perseveration)",
-//            "Self dressing",
-//            "Sexually inappropriate behavior",
-//            "Shadowing, imitates and follows the caregiver",
-//            "Sleeplessness/Sundowning",
-//            "Uncooperative and resistant",
-//            "Verbal outbursts",
-//            "Wandering");
 
     SparseBooleanArray sparseBooleanArray ;
 
