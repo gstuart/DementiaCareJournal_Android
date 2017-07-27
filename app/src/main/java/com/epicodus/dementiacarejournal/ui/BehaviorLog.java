@@ -131,7 +131,8 @@ public class BehaviorLog extends AppCompatActivity implements View.OnClickListen
                 .child("behaviors");
 
         ref.push().setValue(ValueHolder);
-        Log.i("SAVE METHOD    ", ValueHolder.toString());
+        Log.i("  SAVE METHOD    ", ValueHolder.toString());
+
         Intent intent = new Intent(BehaviorLog.this, EmotionLog.class);
         startActivity(intent);
     }
