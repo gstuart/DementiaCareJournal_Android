@@ -26,6 +26,7 @@ import butterknife.ButterKnife;
 
 public class EmotionLog extends AppCompatActivity implements View.OnClickListener {
     @Bind(R.id.saveButton) Button mSaveButton;
+
     private FirebaseAuth mAuth;
     private DatabaseReference mPatient;
     ArrayList<String> ValueHolder;
@@ -40,6 +41,7 @@ public class EmotionLog extends AppCompatActivity implements View.OnClickListene
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_log);
         ButterKnife.bind(this);
+
         mSaveButton.setOnClickListener(this);
 
         ListViewItems.add("Serenity");
@@ -111,7 +113,7 @@ public class EmotionLog extends AppCompatActivity implements View.OnClickListene
                 .getInstance()
                 .getReference(user.getUid())
                 .child("patient")
-                .child("behaviors");
+                .child("emotions");
 
         ref.push().setValue(ValueHolder);
         Log.i("  SAVE METHOD    ", ValueHolder.toString());
