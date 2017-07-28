@@ -111,7 +111,7 @@ public class ActivityLog extends AppCompatActivity implements View.OnClickListen
         ref.push().setValue(ValueHolder);
         Log.i("  SAVE METHOD    ", ValueHolder.toString());
 
-        Intent intent = new Intent(ActivityLog.this, Notes.class);
+        Intent intent = new Intent(ActivityLog.this, MainActivity.class);
         startActivity(intent);
     }
 }
