@@ -114,7 +114,6 @@ public class EmotionLog extends AppCompatActivity implements View.OnClickListene
                 .getReference(user.getUid())
                 .child("patient")
                 .child("logs")
-                .child("date")
                 .child("emotions");
 
         ref.push().setValue(ValueHolder);

@@ -105,7 +105,6 @@ public class ActivityLog extends AppCompatActivity implements View.OnClickListen
                 .getReference(user.getUid())
                 .child("patient")
                 .child("logs")
-                .child("date")
                 .child("activities");
 
         ref.push().setValue(ValueHolder);

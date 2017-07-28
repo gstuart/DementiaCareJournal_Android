@@ -51,7 +51,6 @@ public class Notes extends AppCompatActivity implements  View.OnClickListener {
                 .getReference(user.getUid())
                 .child("patient")
                 .child("logs")
-                .child("date")
                 .child("behaviors");
 
         ref.push().setValue(mNoteEditText);

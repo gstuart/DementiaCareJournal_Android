@@ -110,7 +110,6 @@ public class BehaviorLog extends AppCompatActivity implements View.OnClickListen
                 .getReference(user.getUid())
                 .child("patient")
                 .child("logs")
-                .child("date")
                 .child("behaviors");
 
         ref.push().setValue(ValueHolder);
