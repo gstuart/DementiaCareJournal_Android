@@ -93,8 +93,12 @@ public class ActivityLog extends AppCompatActivity implements View.OnClickListen
     @Override
     public void onClick(View v) {
         if (v == mSaveButton) {
-            savePatientActivities();
-            Toast.makeText(ActivityLog.this, "Selected Items Logged", Toast.LENGTH_SHORT).show();
+            if (ValueHolder == null) {
+                Toast.makeText(ActivityLog.this, "Please make a selection.", Toast.LENGTH_SHORT).show();
+            } else {
+                savePatientActivities();
+                Toast.makeText(ActivityLog.this, "Selected Items Logged", Toast.LENGTH_SHORT).show();
+            }
         }
     }
 

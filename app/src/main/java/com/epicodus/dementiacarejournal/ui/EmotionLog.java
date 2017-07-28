@@ -102,8 +102,12 @@ public class EmotionLog extends AppCompatActivity implements View.OnClickListene
     @Override
     public void onClick(View v) {
         if (v == mSaveButton) {
-            savePatientEmotions();
-            Toast.makeText(EmotionLog.this, "Selected Items Logged", Toast.LENGTH_SHORT).show();
+            if (ValueHolder == null) {
+                Toast.makeText(EmotionLog.this, "Please make a selection.", Toast.LENGTH_SHORT).show();
+            } else {
+                savePatientEmotions();
+                Toast.makeText(EmotionLog.this, "Selected Items Logged", Toast.LENGTH_SHORT).show();
+            }
         }
     }
 
