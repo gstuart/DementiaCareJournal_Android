@@ -59,7 +59,18 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
             logout();
             return true;
         }
+//        if (id == R.id.action_profile){
+//            profile();
+//        }
+
         return super.onOptionsItemSelected(item);
+    }
+
+    private void profile() {
+        Intent intent = new Intent(MainActivity.this, Profile.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        startActivity(intent);
+        finish();
     }
 
     private void logout() {
